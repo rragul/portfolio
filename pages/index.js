@@ -11,6 +11,8 @@ import { useState } from "react";
 import todo from "../public/todo.png";
 import weather from "../public/weather.png";
 import mobile from "../public/mobile.png";
+import flutter from "../public/flutter.png"
+import image from "../public/image.png";
 
 export default function Home() {
   const [darkMode, setDarkMode] = useState(true);
@@ -31,21 +33,21 @@ export default function Home() {
           href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css"
         />
       </Head>
-      <main className="bg-white px-10 lg:px-20 dark:bg-gray-900">
-        <nav className="py-10 mb-12 flex justify-between">
+      <main className="px-10 bg-white lg:px-20 dark:bg-gray-900">
+        <nav className="flex justify-between py-10 mb-12">
           <h1 className="text-4xl font-burtons dark:text-white">Ragul</h1>
           <ul className="flex justify-center">
             <li>
               <BsFillMoonStarsFill
                 onClick={() => setDarkMode(!darkMode)}
-                className="cursor-pointer text-2xl dark:text-white"
+                className="text-2xl cursor-pointer dark:text-white"
               />
             </li>
             <li>
               <a
-                href="/Ragul_Rasalingam.pdf"
+                href="/Rasalingam Ragul.pdf"
                 download="Ragul_Rasalingam.pdf"
-                className=" bg-gradient-to-r from-cyan-500 to-cyan-600  text-white px-4 py-2 rounded-md ml-8"
+                className="px-4 py-2 ml-8 text-white rounded-md bg-gradient-to-r from-cyan-500 to-cyan-600"
               >
                 CV
               </a>
@@ -53,11 +55,11 @@ export default function Home() {
           </ul>
         </nav>
 
-        <div className="text-center px-10 mt-0">
-          <h2 className="text-5xl text-teal-600 font-medium">
+        <div className="px-10 mt-0 text-center">
+          <h2 className="text-5xl font-medium text-teal-600">
             Rasalingam Ragul
           </h2>
-          <h3 className="text-2xl py-2 dark:text-white">
+          <h3 className="py-2 text-2xl dark:text-white">
             Developer and designer{" "}
           </h3>
         </div>
@@ -72,32 +74,32 @@ export default function Home() {
             <AiFillMediumSquare className="hover:scale-125" />
           </a>
         </div>
-        <div className="relative mx-auto bg-gradient-to-b from-teal-600 rounded-full w-80 h-80 mt-20 overflow-hidden">
+        <div className="relative mx-auto mt-20 overflow-hidden rounded-full bg-gradient-to-b from-teal-600 w-80 h-80">
           <Image src={deved} alt="img" layout="fill" objectFit="cover" />
         </div>
 
         <section>
-        <h3 className="text-4xl text-center mt-6 mb-6 mr-10 font-bold font-burtons dark:text-white">
+        <h3 className="mt-6 mb-6 mr-10 text-4xl font-bold text-center font-burtons dark:text-white">
                My Skills
               </h3>
           <div className="flex justify-center">
-            <section className="flex space-x-20 mt-4">
-              <i className="devicon-java-plain colored text-6xl mr-3"></i>
-              <i className="devicon-python-plain colored text-6xl mr-3"></i>
-              <i className="devicon-javascript-plain colored text-6xl mr-3"></i>
+            <section className="flex mt-4 space-x-20">
+              <i className="mr-3 text-6xl devicon-java-plain colored"></i>
+              <i className="mr-3 text-6xl devicon-python-plain colored"></i>
+              <i className="mr-3 text-6xl devicon-javascript-plain colored"></i>
               
-              <i className="devicon-kotlin-plain-wordmark colored text-6xl mr-3"></i>
-              <i className="devicon-c-plain colored text-6xl mr-3"></i>
-              <i className="devicon-html5-plain-wordmark colored text-6xl mr-3"></i>
-              <i className="devicon-css3-plain-wordmark colored text-6xl mr-3"></i>
+              <i className="mr-3 text-6xl devicon-kotlin-plain-wordmark colored"></i>
+              <i className="mr-3 text-6xl devicon-c-plain colored"></i>
+              <i className="mr-3 text-6xl devicon-html5-plain-wordmark colored"></i>
+              <i className="mr-3 text-6xl devicon-css3-plain-wordmark colored"></i>
             </section>
           </div>
           <div className="flex justify-center">
-            <section className="flex space-x-20 mt-4">
-              <i className="devicon-react-original-wordmark colored text-6xl mr-3"></i>
-              <i className="devicon-nodejs-plain-wordmark colored text-6xl mr-3"></i>
-              <i className="devicon-tailwindcss-original-wordmark colored text-6xl mr-3"></i>
-              <i className="devicon-flutter-plain colored text-6xl mr-3"></i>
+            <section className="flex mt-4 space-x-20">
+              <i className="mr-3 text-6xl devicon-react-original-wordmark colored"></i>
+              <i className="mr-3 text-6xl devicon-nodejs-plain-wordmark colored"></i>
+              <i className="mr-3 text-6xl devicon-tailwindcss-original-wordmark colored"></i>
+              <i className="mr-3 text-6xl devicon-flutter-plain colored"></i>
               <i class="devicon-androidstudio-plain-wordmark colored text-6xl mr-3"></i>
             </section>
           </div>
@@ -105,39 +107,34 @@ export default function Home() {
 
         <section>
           <div>
-            <h3 className="text-4xl text-center mt-14 mb-6 font-bold font-burtons dark:text-white">
+            <h3 className="mb-6 text-4xl font-bold text-center mt-14 font-burtons dark:text-white">
               My Works
             </h3>
-            <section className="flex justify-evenly py-4">
-              <div className=" max-w-sm rounded overflow-hidden shadow-lg bg-gray-300 dark:bg-gray-400">
+            <section className="grid grid-cols-3 py-4">
+              <div className="max-w-sm mx-4 overflow-hidden bg-gray-300 rounded shadow-lg dark:bg-gray-400">
                 <Image
-                  src={todo}
+                  src={flutter}
                   alt="img"
                   className="w-full"
                   objectFit="cover"
                 />
                 <div className="px-6 py-2">
-                  <div className="font-bold text-xl mb-1">Todo App</div>
-                  <p className="text-m mb-2">Using React</p>
+                  <div className="mb-1 text-xl font-bold">E-Shop App</div>
+                  <p className="mb-2 text-m">Using Flutter And Firebase</p>
                   <section className="flex">
-                  <a className="bg-teal-600 text-white px-3 py-1 rounded mr-5"
-                    href="https://rragul.github.io/Todo-App/"
-                    target="_blank" rel="noreferrer"
-                  >
-                    View
-                  </a>
+                  
                   <a
-                    className="bg-teal-600 text-white px-3 py-1 rounded"
-                    href="https://github.com/rragul/Todo-App"
+                    className="px-3 py-1 text-white bg-teal-600 rounded"
+                    href="https://github.com/rragul/our_shops"
                     target="_blank" rel="noreferrer"
                   >
-                    <i className="devicon-react-original text-m mr-1"></i>
+                    <i className="mr-1 devicon-flutter-plain text-m"></i>
                     Source
                   </a>
                   </section>
                 </div>
               </div>
-              <div className=" max-w-sm rounded overflow-hidden shadow-lg bg-gray-300 dark:bg-gray-400">
+              <div className="max-w-sm mx-4 overflow-hidden bg-gray-300 rounded shadow-lg dark:bg-gray-400">
                 <Image
                   src={weather}
                   alt="img"
@@ -145,27 +142,27 @@ export default function Home() {
                   objectFit="cover"
                 />
                 <div className="px-6 py-2">
-                  <div className="font-bold text-xl mb-1">weather App</div>
-                  <p className="text-m mb-2">Using React and Axios</p>
+                  <div className="mb-1 text-xl font-bold">weather App</div>
+                  <p className="mb-2 text-m">Using React and Axios</p>
                   <section className="flex">
                   <a
-                    className="bg-teal-600 text-white px-3 py-1 rounded mr-5"
+                    className="px-3 py-1 mr-5 text-white bg-teal-600 rounded"
                     href="https://rragul.github.io/weather-app/"
                     target="_blank" rel="noreferrer">
                     View
                   </a>
                   <a
-                    className="bg-teal-600 text-white px-3 py-1 rounded"
+                    className="px-3 py-1 text-white bg-teal-600 rounded"
                     href="https://github.com/rragul/weather-app"
                     target="_blank" rel="noreferrer"
                   >
-                    <i className="devicon-react-original text-m mr-1"></i>
+                    <i className="mr-1 devicon-react-original text-m"></i>
                     Source
                   </a>
                   </section>
                 </div>
               </div>
-              <div className=" max-w-sm rounded overflow-hidden shadow-lg bg-gray-300 dark:bg-gray-400">
+              <div className="max-w-sm mx-4 overflow-hidden bg-gray-300 rounded shadow-lg dark:bg-gray-400">
                 <Image
                   src={mobile}
                   alt="img"
@@ -173,33 +170,92 @@ export default function Home() {
                   objectFit="cover"
                 />
                 <div className="px-6 py-2">
-                  <div className="font-bold text-xl mb-1">
+                  <div className="mb-1 text-xl font-bold">
                     Mobile Store
                   </div>
-                  <p className="text-m mb-2">Using React, Node and MongoDB </p>
+                  <p className="mb-2 text-m">Using React, Node and MongoDB </p>
                   <section className="flex">
                     <a
-                      className="bg-teal-600 text-white px-3 py-1 rounded mr-5"
+                      className="px-3 py-1 mr-4 text-white bg-teal-600 rounded"
                       href="https://mobile-store-dwn8.onrender.com/"
                       target="_blank" rel="noreferrer">
                       View
                     </a>
                     <a
-                      className="bg-teal-600 text-white px-3 py-1 rounded mr-5"
+                      className="px-3 py-1 mr-3 text-white bg-teal-600 rounded"
                       href="https://github.com/rragul/mobile-store"
                       target="_blank" rel="noreferrer"
                     >
-                      <i className="devicon-react-original text-m mr-1"></i>
+                      <i className="mr-1 devicon-react-original text-m"></i>
                       Source
                     </a>
                     <a
-                      className="bg-teal-600 text-white px-3 py-1 rounded"
+                      className="px-3 py-1 text-white bg-teal-600 rounded"
                       href="https://github.com/rragul/mongo-connect"
                       target="_blank" rel="noreferrer"
                     >
-                      <i className="devicon-nodejs-plain text-m mr-1"></i>
+                      <i className="mr-1 devicon-nodejs-plain text-m"></i>
                       Source
                     </a>
+                  </section>
+                </div>
+              </div>
+               <div className="max-w-sm mx-4 my-4 overflow-hidden bg-gray-300 rounded shadow-lg dark:bg-gray-400">
+                <Image
+                  src={image}
+                  alt="img"
+                  className="w-full"
+                  objectFit="cover"
+                />
+                <div className="px-6 py-2">
+                  <div className="mb-1 text-xl font-bold">Image Generator</div>
+                  <p className="mb-2 text-m">Using React, Node and OpenAI</p>
+                  <section className="flex">
+                 
+                  <a
+                    className="px-3 py-1 text-white bg-teal-600 rounded"
+                    href="https://github.com/rragul/image_genarator_frontend"
+                    target="_blank" rel="noreferrer"
+                  >
+                    <i className="mr-1 devicon-react-original text-m"></i>
+                    Source
+                  </a>
+                  <a
+                    className="px-3 py-1 mx-4 text-white bg-teal-600 rounded"
+                    href="https://github.com/rragul/Image_Genaretor_backend"
+                    target="_blank" rel="noreferrer"
+                  >
+                    <i className="mr-1 devicon-nodejs-plain text-m"></i>
+                    Source
+                  </a>
+                  </section>
+                </div>
+              </div>
+              <div className="max-w-sm mx-4 my-4 overflow-hidden bg-gray-300 rounded shadow-lg dark:bg-gray-400">
+                <Image
+                  src={todo}
+                  alt="img"
+                  className="w-full"
+                  objectFit="cover"
+                />
+                <div className="px-6 py-2">
+                  <div className="mb-1 text-xl font-bold">Todo App</div>
+                  <p className="mb-2 text-m">Using React</p>
+                  <section className="flex">
+                  <a className="px-3 py-1 mr-5 text-white bg-teal-600 rounded"
+                    href="https://rragul.github.io/Todo-App/"
+                    target="_blank" rel="noreferrer"
+                  >
+                    View
+                  </a>
+                  <a
+                    className="px-3 py-1 text-white bg-teal-600 rounded"
+                    href="https://github.com/rragul/Todo-App"
+                    target="_blank" rel="noreferrer"
+                  >
+                    <i className="mr-1 devicon-react-original text-m"></i>
+                    Source
+                  </a>
                   </section>
                 </div>
               </div>
